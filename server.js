@@ -15,10 +15,20 @@ if (!uri) {
 }
 
 // 3. Create a new MongoClient instance
+// const client = new MongoClient(uri, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
 const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  serverApi: {
+    version: '1',
+    strict: true,
+    deprecationErrors: true,
+  }
 });
+
+
 
 // 4. Prepare Express app
 const app = express();
