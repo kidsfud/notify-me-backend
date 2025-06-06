@@ -19,7 +19,6 @@ if (!uri) {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
 // });
-
 const client = new MongoClient(uri, {
   serverApi: {
     version: '1',
