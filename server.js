@@ -111,4 +111,3 @@ app.get('/items', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server is listening on port ${PORT}`);
 });
-
